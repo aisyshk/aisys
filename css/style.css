@@ -1,11 +1,41 @@
+/*
+    MIT License
+
+    Copyright (c) 2023 Alice H.
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+*/
+
+/*
+
+    START SECTION: GLOBAL
+
+*/
+
 :root {
-    --primary-color: rgb(245, 196, 67) !important;
-    --secondary-color: rgb(161, 134, 62) !important;
-    --text-primary: rgb(17, 15, 16) !important;
-    --text-secondary: rgb(252, 215, 116) !important;
-    --nav-dark: rgb(17, 15, 16) !important;
-    --nav-button-border: rgb(61, 49, 24) !important;
-    --background-color: rgb(7, 5, 6) !important;
+    --primary-color: rgba(245, 196, 67, 1) !important;
+    --secondary-color: rgba(161, 134, 62, 1) !important;
+    --text-primary: rgba(17, 15, 16, 1) !important;
+    --text-secondary: rgba(252, 215, 116, 1) !important;
+    --nav-dark: rgba(17, 15, 16, 1) !important;
+    --nav-button-border: rgba(61, 49, 24, 1) !important;
+    --background-color: rgba(7, 5, 6, 1) !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -28,6 +58,23 @@ a {
 p {
     font-size: 20px;
 }
+
+hr {
+    border: 2px solid var(--nav-button-border);
+}
+
+/*
+
+    END SECTION: GLOBAL
+
+*/
+
+
+/* 
+
+    START SECTION: NAVBAR
+
+*/
 
 .nav {
     display: flex;
@@ -80,7 +127,8 @@ p {
     background-color: var(--primary-color);
     display: block;
     padding: 10px;
-    border: 3px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 3px;
     text-align: center;
     font-weight: 600;
     font-size: 22px;
@@ -88,23 +136,71 @@ p {
 }
 
 .nav-button:hover {
-    color: var(--text-secondary);
-    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    background-color: var(--nav-dark);
     padding: 15px;
     font-size: 24px;
     box-shadow: 0 0 30px var(--secondary-color);
-    border: 3px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 3px;
 }
 
-.breadcrumbs {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 5%;
-    z-index: 3;
-}
+/* 
+
+    END SECTION: NAVBAR
+
+*/
+
+
+/* 
+
+    START SECTION: CONTENT
+
+*/
 
 main {
-    color: var(--text-secondary);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
+
+.section {
+    color: var(--primary-color);
+    background-color: var(--nav-dark);
+    margin: auto;
+    width: 50%;
+    padding: 3px 15px 10px 15px;
+    border: 2px solid rgba(245, 196, 67, 1);
+    border-radius: 3px;
+    backdrop-filter: blur(5px);
+    text-align: center;
+    gap: 1rem;
+}
+
+.section p {
+    color: var(--secondary-color);
+}
+
+pill {
+    color: var(--text-secondary);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 2px 4px 2px 4px;
+    margin: 2px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* 
+
+    END SECTION: CONTENT
+
+*/
