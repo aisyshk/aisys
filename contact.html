@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/123821243?v=4" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+</head>
+<body>
+    <br />
+    <main>
+        <div class="section" style="text-align: left;">
+            <h2 style="text-align: left;">Contact Me</h2>
+            <hr />
+            <form method="POST">
+                <label class="form-label" for="name">Name</label>
+                <br />
+                <input class="form-control" type="text" id="name" name="userName" placeholder="Your name..." />
+                <br />
+                <label class="form-label" for="mail">Mail</label>
+                <br />
+                <input class="form-control" type="text" id="mail" name="email" placeholder="john.doe@example.com" />
+                <br />
+                <label class="form-label" for="contactReason">Reason</label>
+                <br />
+                <select class="form-control" id="contactReason" name="reason">
+                    <option value="contribution">Contribution</option>
+                    <option value="copyright">Copyright</option>
+                    <option value="legal">Legal</option>
+                    <option value="question">Question</option>
+                    <option value="request">Request</option>
+                </select>
+                <hr />
+                <label class="form-label" for="subject">Subject</label>
+                <br />
+                <textarea class="form-control" id="subject" name="subject" placeholder="Write something here.." style="height: 400px; width: 45vw;"></textarea>
+                <button class="nav-button" type="submit">Send</button>
+            </form>
+            <!--<form action="POST" onsubmit="return false">
+                <label for="name">Name / Username</label>
+                <input type="text" id="name" name="userName" placeholder="Your name..." />
+                <br />
+                <label for="mail">Email</label>
+                <input type="text" id="mail" name="email" placeholder="john.doe@example.com" />
+                <br />
+                <label for="contactReason">Select reason for contacting</label>
+                <select id="contactReason" name="reason">
+                    <option value="contribution">Contribution</option>
+                    <option value="copyright">Copyright / Legal</option>
+                    <option value="question">Question</option>
+                    <option value="request">Request</option>
+                </select>
+                <hr />
+                <label for="subject">Subject</label>
+                <br />
+                <textarea id="subject" name="subject" placeholder="Write something here.." style="height: 400px; min-width: 400px;"></textarea>
+                <input class="nav-button" type="submit" value="Send" onclick="sendContact()" />
+            </form>-->
+        </div>
+    </main>
+    <script src="./js/contact.js"></script>
+</body>
+</html>
