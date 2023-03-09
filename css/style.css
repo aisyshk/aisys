@@ -471,6 +471,23 @@ pill {
     border-color: rgba(175, 131, 252, 1) !important;
 }
 
+.ts {
+    background-color: rgba(131, 168, 252, 1) !important;
+    border-color: rgba(131, 168, 252, 1) !important;
+}
+
+.html {
+    background-color: rgba(252, 165, 131, 1) !important;
+    border-color: rgba(252, 165, 131, 1) !important;
+}
+
+.css {
+    background-color: rgba(131, 168, 252, 1) !important;
+    border-color: rgba(131, 168, 252, 1) !important;
+}
+
+.js {}
+
 .icon {
     border-radius: 50%;
     border: 3px solid var(--background-color);
