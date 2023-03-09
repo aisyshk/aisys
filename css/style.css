@@ -353,6 +353,10 @@ footer {
     font-size: 18px;
 }
 
+.reset-color {
+    color: var(--primary-color);
+}
+
 /*
 
     END SECTION: FOOTER

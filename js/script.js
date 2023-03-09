@@ -1,9 +1,30 @@
-function changeDefaults() {
+function forceChangeColor() {
+    let colorScheme = localStorage.getItem("customColorScheme");
+
+    if (colorScheme <= 0) {
+        baseDefaults();
+    }
+    else {
+        document.getElementById("colorChanger").value = `${colorScheme}`;
+        document.documentElement.style.setProperty('--primary-color', `${colorScheme}`, "important");
+        document.documentElement.style.setProperty('--secondary-color', `${colorScheme}`, "important");
+        document.documentElement.style.setProperty('--text-secondary', `${colorScheme}`, "important");
+        document.documentElement.style.setProperty('--primary-color', `${colorScheme}`, "important");
+        document.documentElement.style.setProperty('--nav-button-border', `${colorScheme}`, "important");
+    }
+}
+
+function baseDefaults() {
     document.documentElement.style.setProperty('--primary-color', '#f5c443', "important");
     document.documentElement.style.setProperty('--secondary-color', '#a1863e', "important");
     document.documentElement.style.setProperty('--text-secondary', '#fcd774', "important");
     document.documentElement.style.setProperty('--primary-color', '#f5c443', "important");
     document.documentElement.style.setProperty('--nav-button-border', '#3d3118', "important");
+}
+
+function resetDefaultColor() {
+    baseDefaults();
+    localStorage.removeItem("customColorScheme");
 }
 
 function showDropdown() {
@@ -84,15 +105,14 @@ function onColorChanged() {
     let torgb = toRgb(this.value);
     let split = torgb.split("|");
 
+    localStorage.setItem("customColorScheme", this.value);
+
     document.documentElement.style.setProperty('--primary-color', `#ffffff`, "important");
     document.documentElement.style.setProperty('--secondary-color', `#ffffff`, "important");
     document.documentElement.style.setProperty('--text-secondary', `#ffffff`, "important");
     document.documentElement.style.setProperty('--nav-button-border', `#ffffff`, "important");
 
-    changePrimaryColor(parseInt(split[0]), parseInt(split[1]), parseInt(split[2]));
-    changeSecondaryColor(parseInt(split[0]), parseInt(split[1]), parseInt(split[2]));
-    changeTextSecondary(parseInt(split[0]), parseInt(split[1]), parseInt(split[2]));
-    changeButtonBorder(parseInt(split[0]), parseInt(split[1]), parseInt(split[2]));
+    changeColor(parseInt(split[0]), parseInt(split[1]), parseInt(split[2]));
 }
 
 function toHex(r, g, b) {
@@ -109,26 +129,11 @@ function toRgb(hex) {
     return r + "|" + g + "|" + b;
 }
 
-function changePrimaryColor(r, g, b) {
+function changeColor(r, g, b) {
     let hex = toHex(r, g, b);
     console.log(hex);
     document.documentElement.style.setProperty('--primary-color', `${hex}`, "important");
-}
-
-function changeSecondaryColor(r, g, b) {
-    let hex = toHex(r, g, b);
-    console.log(hex);
     document.documentElement.style.setProperty("--secondary-color", `${hex}`, "important");
-}
-
-function changeTextSecondary(r, g, b) {
-    let hex = toHex(r, g, b);
-    console.log(hex);
     document.documentElement.style.setProperty("--text-secondary", `${hex}`, "important");
-}
-
-function changeButtonBorder(r, g, b) {
-    let hex = toHex(r, g, b);
-    console.log(hex);
     document.documentElement.style.setProperty("--nav-button-border", `${hex}`, "important");
 }

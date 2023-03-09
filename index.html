@@ -35,7 +35,7 @@ SOFTWARE.
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="ie-edge" />
 </head>
-<body onload="changeDefaults();">
+<body onload="forceChangeColor();">
     <div class="nav nav-centered nav-dark">
         <div class="nav-item" style="width: 55%;">
             <div class="nav-info">
@@ -383,6 +383,9 @@ SOFTWARE.
             </div>
             <div class="nav-item" style="width: 10%;">
                 <input type="color" id="colorChanger" name="colorChanger" value="#f5c443" />
+            </div>
+            <div class="nav-item" style="width: 15%;">
+                <a class="footer-button reset-color" href="" onclick="resetDefaultColor();">RESET COLOR</a>
             </div>
             <div class="nav-item" style="width: 10%;">
                 <a class="footer-button" href="./api.html" target="_blank">API</a>
