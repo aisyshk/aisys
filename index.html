@@ -44,10 +44,10 @@ SOFTWARE.
             </div>
         </div>
         <div class="nav-item" style="width: 12.25%;">
-            <a class="nav-button" href="#" target="_blank">Home</a>
+            <a class="nav-button" href="">Home</a>
         </div>
         <div class="nav-item" style="width: 12.25%;">
-            <a class="nav-button" href="./projects.html" target="_blank">Projects</a>
+            <a class="nav-button" href="./projects.html">Projects</a>
         </div>
         <!-- Dropdown Button
         <div class="nav-item" style="width: 12.25%;">
@@ -64,12 +64,237 @@ SOFTWARE.
         </div>
         Dropdown Button -->
         <div class="nav-item" style="width: 12.25%;">
-            <a class="nav-button" href="./contact.html" target="_blank">Contact</a>
+            <a class="nav-button" href="./contact.html">Contact</a>
         </div>
     </div>
     <br /><br />
     <main>
-        <div class="section">
+        <div class="section" style="padding: 10px 10px 10px 10px;">
+            <div class="row">
+                <div class="column column-nav" style="width: 25%;">
+                    <div class="row">
+                        <h3 style="color: rgb(17, 15, 16)">Sections</h3>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <a class="accordion accordion-button" id="column-nav" onclick="displaySection('about-me');">
+                            About
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a class="accordion accordion-button" id="column-nav" onclick="displaySection('education-me');">
+                            Education
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a class="accordion accordion-button" id="column-nav" onclick="displaySection('work-me');">
+                            Work
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a class="accordion accordion-button" id="column-nav" onclick="displaySection('skills-me');">
+                            Skills
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a class="accordion accordion-button" id="column-nav" onclick="displaySection('languages-me');" style="font-size: 20px !important;">
+                            Languages
+                        </a>
+                    </div>
+                </div>
+                <div class="column" style="width: 75%; border-left: 2px solid rgb(61, 49, 24); ">
+                    <div class="info-section" id="about-me" style="display: block;">
+                        <h2 style="text-align: left;">About Me</h2>
+                        <hr />
+                        <p>
+                            I'm a student learning how to code in C++/C#, TypeScript, software & web design.
+                            <br />
+                            Aspiring to create something great one day.
+                        </p>
+                        <p>
+                            I am always looking into ways of improving myself.
+                            <br />
+                            These are the languages and skills I possess
+                        </p>
+                        <pill class="unselectable">C++</pill>
+                        <pill class="unselectable">C#</pill>
+                        <pill class="unselectable">TypeScript</pill>
+                        <pill class="unselectable">HTML</pill>
+                        <pill class="unselectable">CSS</pill>
+                        <br />
+                        <br />
+                        <a href="https://github.com/aisyshk" target="_blank">
+                            <img class="icon" alt="GitHub" src="./content/images/github_icon.png" />
+                        </a>
+                    </div>
+                    <div class="info-section" id="education-me">
+                        <h2 style="text-align: left;">Education</h2>
+                        <p style="text-align: left;">
+                            My education.
+                        </p>
+                        <hr />
+                        <a class="accordion accordion-button accordion-work" id="fgu-accordion" onclick="displayPanel('fgu-panel');">
+                            FGU NS
+                        </a>
+                        <div class="work work-panel" id="fgu-panel">
+                            <div class="work-title">
+                                <h3>FGU NS <span class="date-range">2021-2022</span></h3>
+                                <hr class="work-hr" />
+                                <ul class="work-description">
+                                    <li>Community College</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="padding: 3px;"></div>
+                        <a class="accordion accordion-button accordion-work" id="unord-accordion" onclick="displayPanel('unord-panel');">
+                            UNORD
+                        </a>
+                        <div class="work work-panel" id="unord-panel">
+                            <div class="work-title">
+                                <h3>UNORD <span class="date-range">2020-2021</span></h3>
+                                <hr class="work-hr" />
+                                <ul class="work-description">
+                                    <li>CNC Operator</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="padding: 3px;"></div>
+                        <a class="accordion accordion-button accordion-work" id="tec-accordion" onclick="displayPanel('tec-panel');">
+                            TEC
+                        </a>
+                        <div class="work work-panel" id="tec-panel">
+                            <div class="work-title">
+                                <h3>TEC <span class="date-range">2019-2020</span></h3>
+                                <hr class="work-hr" />
+                                <ul class="work-description">
+                                    <li>Data and Communication Engineer</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr />
+                        <a class="accordion accordion-button accordion-work" id="courses-accordion" onclick="displayPanel('courses-panel');">
+                            Courses
+                        </a>
+                        <div class="work work-panel" id="courses-panel">
+                            <div class="work-title">
+                                <h3>Figure Drawing <span class="date-range">2021-2022</span></h3>
+                                <hr class="work-hr" />
+                                <ul class="work-description">
+                                    <li>Class held by Will Weston, Drawing America, on the drawing of the human figure.</li>
+                                </ul>
+                                <h3>Mastering The Human Figure <span class="date-range">2021-2022</span></h3>
+                                <hr class="work-hr" />
+                                <ul class="work-description">
+                                    <li>Courses held by Niel Fontaine on the drawing of the human body anatomy.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-section" id="work-me">
+                        <h2 style="text-align: left;">Work Experience</h2>
+                        <p style="text-align: left; font-size: 17px;">
+                            Being loyal and hardworking goes a long way in my books. I’ll always give it my best and will do exemplary work. I keep an open-minded approach to new tasks and problems, as well as take appropriate time to finish and resolve all of them. I’ll guarantee you will get an impeccable endeavor.
+                        </p>
+                        <hr />
+                        <a class="accordion accordion-button accordion-work" id="nexgen-accordion" onclick="displayPanel('nexgen-panel');">
+                            Nexgen
+                        </a>
+                        <div class="work work-panel" id="nexgen-panel">
+                            <div class="work-title">
+                                <h3>Nexgen <span class="date-range">2023</span></h3>
+                                <hr class="work-hr" />
+                                <ul class="work-description">
+                                    <li>Order handling, transceiver labeling, recoding, packaging and shipping.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="padding: 3px;"></div>
+                        <a class="accordion accordion-button accordion-work" id="danhostel-accordion" onclick="displayPanel('danhostel-panel');">
+                            Danhostel
+                        </a>
+                        <div class="work work-panel" id="danhostel-panel">
+                            <div class="work-title">
+                                <h3>Danhostel <span class="date-range">2022-2023</span></h3>
+                                <hr class="work-hr" />
+                                <ul class="work-description">
+                                    <li>Service Assistant during the evening/night shifts, preparing a wide variety of meals, beverages and entertainment for guests and VIPs.</li>
+                                    <li>Preparation and presentation of the menu during dinner service. Reception of guests and VIPs to the location, organizing and planning the dinner service with co-workers.</li>
+                                    <li>Responsible for hygienic maintenance of the dining area, tables, guests’ rooms, bathrooms, etc, as well as closing of the integral facilities at the end of every shift.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="padding: 3px;"></div>
+                        <a class="accordion accordion-button accordion-work" id="freelance-accordion" onclick="displayPanel('freelance-panel');">
+                            Freelance
+                        </a>
+                        <div class="work work-panel" id="freelance-panel">
+                            <div class="work-title">
+                                <h3>Freelance <span class="date-range">2021-2022</span></h3>
+                                <hr class="work-hr" />
+                                <ul class="work-description">
+                                    <li>Digital art and illustration of stylized characters, objects, places.</li>
+                                    <li>Graphic design ranging from modern, pixel-art, to retro and cinematic logos, posters, diagrams, graphs, cards, etc.</li>
+                                    <li>Video editing and closed captioning for contests, tutorials, etc.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="padding: 3px;"></div>
+                        <a class="accordion accordion-button accordion-work" id="hpe-accordion" onclick="displayPanel('hpe-panel');">
+                            HPE Electronic Assembly
+                        </a>
+                        <div class="work work-panel" id="hpe-panel">
+                            <div class="work-title">
+                                <h3>HPE Electronic Assembly <span class="date-range">2020-2021</span></h3>
+                                <hr class="work-hr" />
+                                <ul class="work-description">
+                                    <li>Use, maintenance, programming/customization, debugging, troubleshooting, quality assurance, as well as quality control, of numerical precision control and correction of Yamaha YSM10, MyData MY500 SMT, and their respective related software, hardware and documentation as provided by the manufacturer.</li>
+                                    <li>Programming and engineering with the use of P-Tools programs, used to format and create viable files for use by both the YMS10 and MY500 SMT machines, to create custom tasks and operations for use by respective machines.</li>
+                                    <li>Mapping and ordering of components provided by Texas Instruments, GE, Qualcomm, Broadcom, TDK, and various other providers, off of sites such as Digi-Key, Mouser, Newark and alike.</li>
+                                    <li>Hand Mounting, Soldering and QC of PCB and PCB components.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-section" id="skills-me">
+                        <h2 style="text-align: left;">My Skills</h2>
+                        <p>
+                            My non-programming capabilities.
+                        </p>
+                        <hr />
+                        <ul class="work-description">
+                            <li>Clip Studio Paint</li>
+                            <li>MS Office / Google Docs</li>
+                            <li>YSM-10, MY500, P-Tools</li>
+                            <li>Paint.NET</li>
+                            <li>Adobe Premiere Pro</li>
+                            <li>Blender</li>
+                            <li>Unity / Unreal Engine</li>
+                        </ul>
+                    </div>
+                    <div class="info-section" id="languages-me">
+                        <h2 style="text-align: left;">Languages</h2>
+                        <p>
+                            Languages I'm capable of understanding, speaking and reading.
+                        </p>
+                        <hr />
+                        <ul class="work-description">
+                            <li>English <pill class="unselectable languages native">Native</pill></li>
+                            <br />
+                            <li>Croatian / Serbian / Bosnian <pill class="unselectable languages proficient">Proficient</pill></li>
+                            <br />
+                            <li>Danish <pill class="unselectable languages proficient">Proficient</pill></li>
+                            <br />
+                            <li>German <pill class="unselectable languages intermediate">Intermediate</pill></li>
+                            <br />
+                            <li>Japanese <pill class="unselectable languages intermediate">Intermediate</pill></li>
+                            <br />
+                            <li>Korean <pill class="unselectable languages beginner">Beginner</pill></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="section" id="about-panel">
             <h2 style="text-align: left;">About Me</h2>
             <hr />
             <p>
@@ -87,16 +312,64 @@ SOFTWARE.
             <pill class="unselectable">TypeScript</pill>
             <pill class="unselectable">HTML</pill>
             <pill class="unselectable">CSS</pill>
+            <br />
+            <br />
+            <a href="https://github.com/aisyshk" target="_blank">
+                <img class="icon" alt="GitHub" src="./content/images/github_icon.png" />
+            </a>
         </div>
-        <div class="section">
-            <h2 style="text-align: left;">Test</h2>
+        <a class="accordion accordion-button-dark" id="accordion" onclick="displayWorkPanel();">
+            Work
+        </a>
+        <div class="accordion-section" id="work-panel">
+            <h2 style="text-align: left;">Work Experience</h2>
             <hr />
-            <p>
-                Lorem ipsum.
-                <br />
-                Lorem ipsum.
-            </p>
-        </div>
+            <a class="accordion accordion-button accordion-work" id="danhostel-accordion" onclick="displayPanel('danhostel-panel');">
+                Danhostel
+            </a>
+            <div class="work work-panel" id="danhostel-panel">
+                <div class="work-title">
+                    <h3>Danhostel <span class="date-range">2022-2023</span></h3>
+                    <hr class="work-hr" />
+                    <ul class="work-description">
+                        <li>Service Assistant during the evening/night shifts, preparing a wide variety of meals, beverages and entertainment for guests and VIPs.</li>
+                        <li>Preparation and presentation of the menu during dinner service. Reception of guests and VIPs to the location, organizing and planning the dinner service with co-workers.</li>
+                        <li>Responsible for hygienic maintenance of the dining area, tables, guests’ rooms, bathrooms, etc, as well as closing of the integral facilities at the end of every shift.</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="padding: 3px;"></div>
+            <a class="accordion accordion-button accordion-work" id="freelance-accordion" onclick="displayPanel('freelance-panel');">
+                Freelance
+            </a>
+            <div class="work work-panel" id="freelance-panel">
+                <div class="work-title">
+                    <h3>Freelance <span class="date-range">2021-2022</span></h3>
+                    <hr class="work-hr" />
+                    <ul class="work-description">
+                        <li>Digital art and illustration of stylized characters, objects, places.</li>
+                        <li>Graphic design ranging from modern, pixel-art, to retro and cinematic logos, posters, diagrams, graphs, cards, etc.</li>
+                        <li>Video editing and closed captioning for contests, tutorials, etc.</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="padding: 3px;"></div>
+            <a class="accordion accordion-button accordion-work" id="hpe-accordion" onclick="displayPanel('hpe-panel');">
+                HPE Electronic Assembly
+            </a>
+            <div class="work work-panel" id="hpe-panel">
+                <div class="work-title">
+                    <h3>HPE Electronic Assembly <span class="date-range">2020-2021</span></h3>
+                    <hr class="work-hr" />
+                    <ul class="work-description">
+                        <li>Use, maintenance, programming/customization, debugging, troubleshooting, quality assurance, as well as quality control, of numerical precision control and correction of Yamaha YSM10, MyData MY500 SMT, and their respective related software, hardware and documentation as provided by the manufacturer.</li>
+                        <li>Programming and engineering with the use of P-Tools programs, used to format and create viable files for use by both the YMS10 and MY500 SMT machines, to create custom tasks and operations for use by respective machines.</li>
+                        <li>Mapping and ordering of components provided by Texas Instruments, GE, Qualcomm, Broadcom, TDK, and various other providers, off of sites such as Digi-Key, Mouser, Newark and alike.</li>
+                        <li>Hand Mounting, Soldering and QC of PCB and PCB components.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>-->
     </main>
     <footer>
         <div class="nav nav-centered nav-dark">

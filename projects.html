@@ -1,3 +1,28 @@
+<!--
+
+MIT License
+
+Copyright (c) 2023 Alice H.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
 
 <!DOCTYPE html>
 <html lang="en-us">
@@ -17,10 +42,10 @@
             </div>
         </div>
         <div class="nav-item" style="width: 12.25%;">
-            <a class="nav-button" href="./index.html" target="_blank">Home</a>
+            <a class="nav-button" href="./index.html">Home</a>
         </div>
         <div class="nav-item" style="width: 12.25%;">
-            <a class="nav-button" href="./projects.html" target="_blank">Projects</a>
+            <a class="nav-button" href="">Projects</a>
         </div>
         <!-- Dropdown Button
         <div class="nav-item" style="width: 12.25%;">
@@ -37,20 +62,155 @@
         </div>
         Dropdown Button -->
         <div class="nav-item" style="width: 12.25%;">
-            <a class="nav-button" href="#" target="_blank">Contact</a>
+            <a class="nav-button" href="./contact.html">Contact</a>
         </div>
     </div>
     <br />
     <main>
-        <div class="section" style="width: auto;">
+        <div class="section" style="padding: 10px 10px 10px 10px;">
+            <div class="row">
+                <div class="column column-nav" style="width: 25%;">
+                    <div class="row">
+                        <h3 style="color: rgb(17, 15, 16)">Projects</h3>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <a class="accordion accordion-button" id="column-nav" onclick="displaySection('personal');">
+                            Personal
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a class="accordion accordion-button" id="column-nav" onclick="displaySection('business');">
+                            Business
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a class="accordion accordion-button" id="column-nav" onclick="displaySection('contributions');">
+                            Contributions
+                        </a>
+                    </div>
+                </div>
+                <div class="column" style="width: 75%; border-left: 2px solid rgb(61, 49, 24); ">
+                    <div class="info-section" id="personal" style="display: block;">
+                        <h2 style="text-align: left;">My Personal Projects</h2>
+                        <hr />
+                        <a class="accordion accordion-button accordion-work" id="dailywall-accordion" onclick="displayPanel('dailywall-panel');">
+                            Daily Wallpapers
+                        </a>
+                        <div class="work work-panel" id="dailywall-panel">
+                            <div class="work-title">
+                                <h3>Daily Wallpapers <pill class="unselectable cpp">C++</pill></h3>
+                                <hr class="work-hr" />
+                                <div class="work-description">
+                                    <div style="padding: 5px;"></div>
+                                    <div class="cards">
+                                        <div id="dailyWallpapers" class="card" onclick="window.open('https://github.com/aisyshk/DailyWallpapers');">
+                                            <div class="card-content">
+                                                <h3 class="card-title">Daily Wallpapers</h3>
+                                                <span class="card-description">
+                                                    <i>
+                                                        Console application that checks Bing's API for new daily images and sets them as desktop wallpaper.
+                                                    </i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <a href="https://github.com/aisyshk/DailyWallpapers" target="_blank">
+                                            <img class="icon" alt="GitHub" src="./content/images/github_icon.png" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 3px;"></div>
+                        <a class="accordion accordion-button accordion-work" id="hyperx-accordion" onclick="displayPanel('hyperx-panel');">
+                            Hyper X Battery
+                        </a>
+                        <div class="work work-panel" id="hyperx-panel">
+                            <div class="work-title">
+                                <h3>Hyper X Battery <pill class="unselectable cpp">C++</pill></h3>
+                                <hr class="work-hr" />
+                                <div class="work-description">
+                                    <div style="padding: 5px;"></div>
+                                    <div class="cards">
+                                        <div id="hyperXBattery" class="card" onclick="window.open('https://github.com/aisyshk/HyperX-Battery');">
+                                            <div class="card-content">
+                                                <h3 class="card-title">HyperX Battery</h3>
+                                                <span class="card-description">
+                                                    <i>
+                                                        Read HyperX Cloud Flight headset's battery percentage, mute and power toggle status.
+                                                    </i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <a href="https://github.com/aisyshk/HyperX-Battery" target="_blank">
+                                            <img class="icon" alt="GitHub" src="./content/images/github_icon.png" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 3px;"></div>
+                        <a class="accordion accordion-button accordion-work" id="mouselocator-accordion" onclick="displayPanel('mouselocator-panel');">
+                            Mouse Locator
+                        </a>
+                        <div class="work work-panel" id="mouselocator-panel">
+                            <div class="work-title">
+                                <h3>Mouse Locator <pill class="unselectable cpp">C++</pill></h3>
+                                <hr class="work-hr" />
+                                <div class="work-description">
+                                    <div style="padding: 5px;"></div>
+                                    <div class="cards">
+                                        <div id="mouseLocator" class="card" onclick="window.open('https://github.com/aisyshk/MouseLocator');">
+                                            <div class="card-content">
+                                                <h3 class="card-title">Mouse Locator</h3>
+                                                <span class="card-description">
+                                                    <i>
+                                                        Displays the X and Y location of your mouse in console.
+                                                    </i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <a href="https://github.com/aisyshk/MouseLocator" target="_blank">
+                                            <img class="icon" alt="GitHub" src="./content/images/github_icon.png" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-section" id="business">
+                        <h2 style="text-align: left;">Business Projects</h2>
+                        <p style="text-align: left; font-size: 17px;">
+                            Business related projects I worked on, or contributed to, in some way.
+                        </p>
+                        <hr />
+                        <h4>There's nothing here yet!</h4>
+                    </div>
+                    <div class="info-section" id="contributions">
+                        <h2 style="text-align: left;">My Contributions</h2>
+                        <p style="text-align: left; font-size: 17px;">
+                            Notable contributions to other repositories/projects.
+                        </p>
+                        <hr />
+                        <h4>There's nothing here yet!</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="section" style="width: auto;">
             <h2 style="text-align: left;">Projects</h2>
             <hr />
             <p>
                 Here are some of the projects that I've worked on.
             </p>
-            <br />
             <div class="cards">
-                <div id="dailyWallpapersCard" class="card" onclick="window.open('https://github.com/aisyshk/DailyWallpapers');">
+                <div id="dailyWallpapers" class="card" onclick="window.open('https://github.com/aisyshk/DailyWallpapers');">
                     <div class="card-content">
                         <h3 class="card-title">Daily Wallpapers</h3>
                         <span class="card-description">
@@ -60,17 +220,17 @@
                         </span>
                     </div>
                 </div>
-                <div id="hyperXBatteryCard" class="card" onclick="window.open('https://github.com/aisyshk/HyperXBattery');">
+                <div id="hyperXBattery" class="card" onclick="window.open('https://github.com/aisyshk/HyperXBattery');">
                     <div class="card-content">
                         <h3 class="card-title">HyperX Battery</h3>
                         <span class="card-description">
                             <i>
-                                App for reading HyperX Cloud Flight headset's battery level, mute and power toggle.
+                                Read HyperX Cloud Flight headset's battery percentage, mute and power toggle status.
                             </i>
                         </span>
                     </div>
                 </div>
-                <div id="mouseLocatorCard" class="card" onclick="window.open('https://github.com/aisyshk/MouseLocator');">
+                <div id="mouseLocator" class="card" onclick="window.open('https://github.com/aisyshk/MouseLocator');">
                     <div class="card-content">
                         <h3 class="card-title">Mouse Locator</h3>
                         <span class="card-description">
@@ -80,21 +240,11 @@
                         </span>
                     </div>
                 </div>
-                <div id="Card" class="card" onclick="window.open('https://github.com/aisyshk/aisys');">
-                    <div class="card-content">
-                        <h3 class="card-title">TO DO:</h3>
-                        <span class="card-description">
-                            <i>
-                                Make dedicated card images for every project
-                            </i>
-                        </span>
-                    </div>
-                </div>
             </div>
             <p>
                 WIP.
             </p>
-        </div>
+        </div>-->
     </main>
     <script src="./js/script.js"></script>
 </body>
