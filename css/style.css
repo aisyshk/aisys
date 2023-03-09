@@ -29,12 +29,12 @@
 */
 
 :root {
-    --primary-color: rgba(245, 196, 67, 1) !important;
-    --secondary-color: rgba(161, 134, 62, 1) !important;
+    --primary-color: #000000 !important;
+    --secondary-color: #000000 !important;
     --text-primary: rgba(17, 15, 16, 1) !important;
-    --text-secondary: rgba(252, 215, 116, 1) !important;
+    --text-secondary: #000000 !important;
     --nav-dark: rgba(17, 15, 16, 1) !important;
-    --nav-button-border: rgba(61, 49, 24, 1) !important;
+    --nav-button-border: #000000 !important;
     --card-description: rgba(232, 215, 166, 0.8) !important;
     --background-color: rgba(7, 5, 6, 1) !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
