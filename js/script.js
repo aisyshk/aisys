@@ -40,7 +40,6 @@ function forceChangeColor() {
         document.documentElement.style.setProperty('--primary-color', `${colorScheme}`, "important");
         document.documentElement.style.setProperty('--secondary-color', `${colorScheme}`, "important");
         document.documentElement.style.setProperty('--text-secondary', `${colorScheme}`, "important");
-        document.documentElement.style.setProperty('--primary-color', `${colorScheme}`, "important");
         document.documentElement.style.setProperty('--nav-button-border', `${colorScheme}`, "important");
     }
 }
@@ -49,7 +48,6 @@ function baseDefaults() {
     document.documentElement.style.setProperty('--primary-color', '#f5c443', "important");
     document.documentElement.style.setProperty('--secondary-color', '#a1863e', "important");
     document.documentElement.style.setProperty('--text-secondary', '#fcd774', "important");
-    document.documentElement.style.setProperty('--primary-color', '#f5c443', "important");
     document.documentElement.style.setProperty('--nav-button-border', '#3d3118', "important");
 }
 
